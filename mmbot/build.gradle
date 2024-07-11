@@ -1,19 +1,49 @@
 plugins {
     id 'java'
+    id 'org.springframework.boot' version '2.7.12'
+    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+wrapper {
+    gradleVersion = '9.0'
 }
 
 group = 'com.example'
-version = '1.0-SNAPSHOT'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '8'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'org.springframework.cloud:spring-cloud-config-server'
+    implementation 'org.projectlombok:lombok:1.18.26'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    // for Spring Cloud Function
+    implementation 'org.springframework.cloud:spring-cloud-function-adapter-aws'
+    // for distribute to AWS Lambda
+    implementation group: 'com.amazonaws', name: 'aws-lambda-java-core', version: '1.2.1'
+    // for control AWS Lambda events
+    implementation group: 'com.amazonaws', name: 'aws-lambda-java-events', version: '3.9.0'
+    implementation 'org.springframework.cloud:spring-cloud-starter-function-web'
 }
 
-test {
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:2021.0.7"
+    }
+}
+
+tasks.named('test') {
     useJUnitPlatform()
+}
+
+// for distribute to zip
+task buildZip(type: Zip) {
+    from compileJava
+    from processResources
+    into('lib') {
+        from configurations.runtimeClasspath
+    }
 }
