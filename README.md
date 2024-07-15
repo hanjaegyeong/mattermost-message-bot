@@ -32,6 +32,20 @@
 ```bash
 gradlew buildZip
 ```
+
+### VPC 설정
+
+![VPC 설정](src/main/resources/images/Untitled.png)
+
+### 람다 설정
+
+![람다 설정1](src/main/resources/images/Untitled(1).png)
+![람다 설정2](src/main/resources/images/Untitled(2).png)
+![람다 설정3](src/main/resources/images/Untitled(3).png)
+
+### Amazon EventBridge 설정
+![EventBridge 설정](src/main/resources/images/Untitled(4).png)
+
 ---
 ## Trouble Shooting
 
@@ -88,21 +102,6 @@ gradlew buildZip
   - 패키지 구조가 복잡해지며 람다 상에서 연결 타임아웃 30초를 초과한 것으로 추정됨
 
 ---
-## AWS 설정
-
-### VPC 설정
-
-![VPC 설정](src/main/resources/images/Untitled.png)
-
-### 람다 설정
-
-![람다 설정1](src/main/resources/images/Untitled(1).png)
-![람다 설정2](src/main/resources/images/Untitled(2).png)
-![람다 설정3](src/main/resources/images/Untitled(3).png)
-
-### Amazon EventBridge 설정
-![EventBridge 설정](src/main/resources/images/Untitled(4).png)
-
 ## 참고 자료
 
 - [Spring과 AWS Lambda 배포 및 실행 방법](https://may9noy.tistory.com/1333)
