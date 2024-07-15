@@ -43,7 +43,6 @@ gradlew buildZip
 
 ### 람다 설정
 
-
 <img src="src/main/resources/images/Untitled(1).png" alt="람다 설정" width="600"/>
 <img src="src/main/resources/images/Untitled(2).png" alt="람다 설정" width="600"/>
 <img src="src/main/resources/images/Untitled(3).png" alt="람다 설정" width="700"/>
