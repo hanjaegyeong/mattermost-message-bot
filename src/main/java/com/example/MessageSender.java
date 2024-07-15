@@ -26,7 +26,7 @@ public class MessageSender implements Function<UserRequest, String> {
 
     @Override
     public String apply(UserRequest request) {
-        String message = "{\"text\": \"6시입니다~ 다들 퇴실체크&&설문 잊지 마세요:smile: \"}";
+        String message = "{\"text\": \"12시입니다~ 다들 명찰 챙기기 잊지 마세요:smile: \"}";
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
         HttpEntity<String> entity = new HttpEntity<>(message, headers);
