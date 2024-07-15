@@ -1,4 +1,4 @@
-package com.example;
+package com.example.handler;
 
 import org.springframework.cloud.function.adapter.aws.SpringBootStreamHandler;
 

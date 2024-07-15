@@ -1,4 +1,4 @@
-package com.example;
+package com.example.config;
 
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
