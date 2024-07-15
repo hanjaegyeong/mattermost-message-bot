@@ -70,8 +70,8 @@ gradlew buildZip
     ```
 
 - **해결 방법**:
-    - [stack overflow 게시글](https://stackoverflow.com/questions/55386643/aws-api-gateway-connection-timeout-on-accessing-api-using-spring-resttemplate)을 참조
-    - 스프링 코드에 timeout 설정 추가
+    - [aws 공식문서](https://repost.aws/ko/knowledge-center/lambda-function-retry-timeout-sdk)을 참조
+    - 스프링 코드에 timeout config 파일 추가
 
 
 ---
