@@ -17,7 +17,7 @@ public class RestTemplateConfig {
         requestFactory.setHttpClient(httpClient);
 
         // 타임아웃 설정
-        requestFactory.setConnectTimeout(30000); // 연결 타임아웃 30초
+        requestFactory.setConnectTimeout(50000); // 연결 타임아웃 50초
         requestFactory.setReadTimeout(30000);    // 읽기 타임아웃 30초
 
         return new RestTemplate(requestFactory);
