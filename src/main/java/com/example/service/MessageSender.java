@@ -1,6 +1,6 @@
 package com.example.service;
 
-import com.example.dto.UserRequest;
+import com.example.dto.request.UserRequest;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;

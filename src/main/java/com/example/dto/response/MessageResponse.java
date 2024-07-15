@@ -1,4 +1,4 @@
-package com.example.dto;
+package com.example.dto.response;
 
 public class MessageResponse {
     private final String result;

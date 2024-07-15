@@ -1,4 +1,4 @@
-package com.example.dto;
+package com.example.dto.request;
 
 public class UserRequest {
     private int flag;
