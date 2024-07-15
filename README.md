@@ -15,7 +15,11 @@
 ### 로컬 서버 테스트
 ![EventBridge 설정](src/main/resources/images/image.png)
 
-### 실제 서버 테스트
+### docker 컨테이너를 이용한 테스트용 mattermost 채널 제작
+![EventBridge 설정](src/main/resources/images/img2.png)
+![EventBridge 설정](src/main/resources/images/img.png)
+
+### docker 컨테이너 상에서의 람다 함수(메시지봇) 테스트
 ![EventBridge 설정](src/main/resources/images/image(2).png)
 ![EventBridge 설정](src/main/resources/images/image(1).png)
 
@@ -26,7 +30,7 @@
 람다 함수에 업로드할 ZIP 파일을 생성하려면 다음 명령어 사용:
 
 ```bash
-./gradlew buildZip
+gradlew buildZip
 ```
 ---
 ## Trouble Shooting
