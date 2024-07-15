@@ -65,7 +65,7 @@ gradlew buildZip
 - **문제 설명**: 로컬에서는 정상 작동되나 AWS Lambda에 배포하면 다음과 같은 예외가 발생
 
     ```plaintext
-    "errorMessage": "I/O error on POST request for \"https://meeting.ssafy.com/hooks/tbwuuswcxtnzby54mjwq56ukac\": Connection timed out (Connection timed out); nested exception is java.net.ConnectException: Connection timed out (Connection timed out)",
+    "errorMessage": "I/O error on POST request for \"https://meeting.ssafy.com/hooks/(URL)\": Connection timed out (Connection timed out); nested exception is java.net.ConnectException: Connection timed out (Connection timed out)",
     "errorType": "org.springframework.web.client.ResourceAccessException", ...
     ```
 
@@ -73,6 +73,19 @@ gradlew buildZip
     - [aws 공식문서](https://repost.aws/ko/knowledge-center/lambda-function-retry-timeout-sdk)을 참조
     - 스프링 코드에 timeout config 파일 추가
 
+### AWS Lambda ConnectException
+
+- **문제 설명**: 패키지 구조 변경 이후 AWS Lambda에 배포하면 다음과 같은 예외가 발생
+
+    ```plaintext
+    "errorMessage": "I/O error on POST request for \"https://meeting.ssafy.com/hooks/(URL)\": Connection timed out (Connection timed out); nested exception is java.net.ConnectException: Connection timed out (Connection timed out)",
+    "errorType": "org.springframework.web.client.ResourceAccessException", ...
+    ```
+
+- **해결 방법**:
+  - 연결 타임아웃을 30초 -> 50초로 증가
+  ![VPC 설정](src/main/resources/images/config_img.png)
+  - 패키지 구조가 복잡해지며 람다 상에서 연결 타임아웃 30초를 초과한 것으로 추정됨
 
 ---
 ## AWS 설정
